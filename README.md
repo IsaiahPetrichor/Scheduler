@@ -1,6 +1,6 @@
 # Employee Scheduler
 
-## CRUD application using localStorage
+### CRUD application using localStorage
 
 ## Technologies Used:
 
