@@ -6,6 +6,7 @@
 
     - React
     - Redux
+    - uuidv4
     - HTML
     - CSS
     - JS
