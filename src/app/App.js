@@ -9,7 +9,7 @@ import {
 import './App.css';
 import routes from './routes';
 import Schedule from '../components/schedule/schedule';
-import AddEmployeeForm from '../components/addEmployee/addEmployee';
+import AddEmployeeForm from '../components/employees/addEmployee';
 import ScheduleForm from '../components/scheduleEmployee/scheduleEmployee';
 
 export default function App() {
@@ -23,10 +23,10 @@ export default function App() {
 							<button>View Schedule</button>
 						</li>
 						<li>
-							<button>Schedule Employee</button>
+							<button>Schedule Employees</button>
 						</li>
 						<li>
-							<button>Add Employee</button>
+							<button>Edit Employees</button>
 						</li>
 					</ul>
 				</nav>

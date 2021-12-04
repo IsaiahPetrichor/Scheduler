@@ -31,6 +31,7 @@ header ul {
 header button {
 	background-color: transparent;
 	padding: 8px;
+	margin: 0px 15px;
 	border-radius: 3px;
 	border: none;
 	color: white;
@@ -54,6 +55,7 @@ thead {
 
 th,
 td {
+	text-align: center;
 	width: 100px;
 	height: 60px;
 	border: 1px solid grey;

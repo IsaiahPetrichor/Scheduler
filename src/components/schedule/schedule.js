@@ -1,5 +1,9 @@
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectEmployees } from '../employees/employeeSlice';
+
 export default function Schedule() {
-	let employees = [];
+	let employees = useSelector(selectEmployees);
 
 	return (
 		<div className="schedule">
@@ -15,13 +19,18 @@ export default function Schedule() {
 					<th>Sunday</th>
 				</thead>
 				<tbody>
-					{employees.forEach((employee) => {
-						return (
-							<tr>
-								<td>{employee.name}</td>
-							</tr>
-						);
-					})}
+					{Object.values(employees).map((employee) => (
+						<tr>
+							<td>{`${employee.name.first} ${employee.name.last[0]}.`}</td>
+							<td>{employee.schedule.monday}</td>
+							<td>{employee.schedule.tuesday}</td>
+							<td>{employee.schedule.wednesday}</td>
+							<td>{employee.schedule.thursday}</td>
+							<td>{employee.schedule.friday}</td>
+							<td>{employee.schedule.saturday}</td>
+							<td>{employee.schedule.sunday}</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 		</div>
