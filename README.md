@@ -4,8 +4,8 @@
 
 ## Technologies Used:
 
-    - React
-    - Redux
+    - React (with React Router)
+    - Redux (with Redux Toolkit)
     - uuidv4
     - HTML
     - CSS
