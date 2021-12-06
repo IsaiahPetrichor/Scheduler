@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import routes from '../../app/routes';
 import { v4 as uuidv4 } from 'uuid';
 import { addEmployee } from './employeeSlice';
 
@@ -26,7 +25,7 @@ export default function AddEmployeeForm() {
 	};
 
 	return (
-		<div className="addEmployee">
+		<div className="forms">
 			<form onSubmit={handleSubmit}>
 				<h2>Add new employee</h2>
 				<input

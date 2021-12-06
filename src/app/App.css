@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
 	margin: 0;
 	padding: 0;
@@ -7,8 +8,10 @@
 html {
 	background-color: rgb(66, 66, 66);
 	color: white;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Header Styles */
 header {
 	background-color: rgb(30, 80, 130);
 	display: flex;
@@ -28,7 +31,11 @@ header ul {
 	list-style: none;
 }
 
-header button {
+header li {
+	display: flex;
+}
+
+.nav {
 	background-color: transparent;
 	padding: 8px;
 	margin: 0px 15px;
@@ -36,16 +43,40 @@ header button {
 	border: none;
 	color: white;
 	font-size: 1.4em;
+	text-decoration: none;
 }
 
-header button:hover {
+.nav:hover {
 	background-color: rgba(0, 0, 0, 0.4);
 	cursor: pointer;
 }
 
-table {
+/* Main Styles */
+
+main {
 	width: 90vw;
 	margin: auto;
+}
+
+main button {
+	margin-top: 25px;
+	font-size: 1.4em;
+	width: fit-content;
+	padding: 5px 15px;
+	background-color: #156b64;
+	color: white;
+	border: 1px solid rgb(37, 37, 37);
+	border-radius: 5px;
+}
+
+main button:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+/* Schedule Styles */
+table {
+	width: 100%;
 }
 
 thead {
@@ -59,4 +90,46 @@ td {
 	width: 100px;
 	height: 60px;
 	border: 1px solid grey;
+	border-radius: 2px;
+}
+
+/* Form Styles */
+.forms {
+	margin: 10px 0px;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.forms form {
+	display: flex;
+	flex-direction: column;
+	margin: 25px 0px 0px 25px;
+}
+
+.forms label {
+	font-size: 1.2em;
+	padding: 5px;
+	width: 25%;
+}
+
+.forms input,
+.forms select {
+	margin: 5px 0px;
+	font-size: 1.1em;
+	width: 25%;
+	background-color: rgba(30, 80, 130, 0.8);
+	color: white;
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+.warning {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgb(255, 72, 72);
+	border-radius: 2px;
+	padding: 5px;
+	width: fit-content;
 }

@@ -1,42 +1,22 @@
 import React from 'react';
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	NavLink,
-	useRouteMatch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import routes from './routes';
+import Header from '../components/main/header';
 import Schedule from '../components/schedule/schedule';
-import AddEmployeeForm from '../components/employees/addEmployee';
-import ScheduleForm from '../components/scheduleEmployee/scheduleEmployee';
+import Edit from '../components/employees/employees';
 
 export default function App() {
 	return (
-		<>
-			<header>
-				<h1>Employee Schedule</h1>
-				<nav>
-					<ul>
-						<li>
-							<button>View Schedule</button>
-						</li>
-						<li>
-							<button>Schedule Employees</button>
-						</li>
-						<li>
-							<button>Edit Employees</button>
-						</li>
-					</ul>
-				</nav>
-			</header>
-
-			<main>
-				<Schedule />
-				<ScheduleForm />
-				<AddEmployeeForm />
-			</main>
-		</>
+		<Router>
+			<div>
+				<Header />
+				<main>
+					<Routes>
+						<Route path="/" element={<Schedule />} />
+						<Route path="/employees" element={<Edit />} />
+					</Routes>
+				</main>
+			</div>
+		</Router>
 	);
 }

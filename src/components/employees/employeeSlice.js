@@ -4,7 +4,7 @@ const employeeSlice = createSlice({
 	name: 'employees',
 	initialState: {
 		0: {
-			id: 0,
+			id: '0',
 			name: {
 				first: 'Jane',
 				last: 'Doe',
@@ -42,12 +42,30 @@ const employeeSlice = createSlice({
 			};
 			Object.assign(state, obj);
 		},
+		removeEmployee(state, action) {
+			delete state[action.payload.id];
+		},
+		updateEmployee(state, action) {
+			const obj = {
+				id: action.payload.id,
+				name: {
+					first: action.payload.first,
+					last: action.payload.last,
+				},
+				schedule: state[action.payload.id].schedule,
+			};
+			state[action.payload.id] = obj;
+		},
+		setNewSchedule(state, action) {
+			Object.assign(state[action.payload.id].schedule, action.payload.schedule);
+		},
 	},
 });
 
 export const selectEmployees = (state) => state.employees;
 
-export const { addEmployee } = employeeSlice.actions;
+export const { addEmployee, removeEmployee, updateEmployee, setNewSchedule } =
+	employeeSlice.actions;
 
 const { reducer } = employeeSlice;
 export default reducer;
