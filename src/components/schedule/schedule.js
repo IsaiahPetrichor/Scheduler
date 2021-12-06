@@ -23,18 +23,20 @@ export default function Schedule() {
 						</tr>
 					</thead>
 					<tbody>
-						{Object.values(employees).map((employee) => (
-							<tr>
-								<td>{`${employee.name.first} ${employee.name.last[0]}.`}</td>
-								<td>{employee.schedule.monday}</td>
-								<td>{employee.schedule.tuesday}</td>
-								<td>{employee.schedule.wednesday}</td>
-								<td>{employee.schedule.thursday}</td>
-								<td>{employee.schedule.friday}</td>
-								<td>{employee.schedule.saturday}</td>
-								<td>{employee.schedule.sunday}</td>
-							</tr>
-						))}
+						{Object.values(employees).map((employee) => {
+							return (
+								<tr>
+									<td>{`${employee.name.first} ${employee.name.last[0]}.`}</td>
+									<td>{employee.schedule.monday}</td>
+									<td>{employee.schedule.tuesday}</td>
+									<td>{employee.schedule.wednesday}</td>
+									<td>{employee.schedule.thursday}</td>
+									<td>{employee.schedule.friday}</td>
+									<td>{employee.schedule.saturday}</td>
+									<td>{employee.schedule.sunday}</td>
+								</tr>
+							);
+						})}
 					</tbody>
 				</table>
 			</div>

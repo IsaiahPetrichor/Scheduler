@@ -24,6 +24,10 @@ export default function UpdateEmployeeForm() {
 				schedule: employees[id].schedule,
 			})
 		);
+
+		setFirst('');
+		setLast('');
+		setId();
 	};
 
 	return (

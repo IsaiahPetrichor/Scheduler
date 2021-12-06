@@ -19,6 +19,8 @@ export default function RemoveEmployeeForm() {
 				id: id,
 			})
 		);
+
+		setId();
 	};
 
 	return (

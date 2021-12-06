@@ -26,6 +26,8 @@ export default function ScheduleForm() {
 				schedule: schedule,
 			})
 		);
+
+		localStorage.setItem('scheduler', JSON.stringify(employees));
 	};
 
 	return (
