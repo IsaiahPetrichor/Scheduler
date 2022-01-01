@@ -1,11 +1,11 @@
 # Employee Scheduler
 
-### CRUD application using localStorage
+### CRUD application for maintaining employees and their schedules
 
 ## Technologies Used:
 
-    - React
-    - Redux
+    - React (with React Router)
+    - Redux (with Redux Toolkit)
     - CSS
     - uuidv4
     - JSX
